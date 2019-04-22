@@ -1,0 +1,11 @@
+/* this make it possible to work with rem and em with a similar kind metrix. 1.6rem and em(16px)
+
+@media (min-width: em(501px)) {
+  font-size: 1.6rem;
+}
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+$base-font-size: 16px;
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
+}

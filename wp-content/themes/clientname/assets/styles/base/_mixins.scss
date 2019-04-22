@@ -1,0 +1,32 @@
+//box-shadow Use: @include box-shadow(0, 0, 7px, rgba(0, 0, 0, .3));
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+
+// border-radius Use; @include border-radius(10px); }
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Transition Use; @include transition(all .3s ease); }
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// Set aspect ratio 
+@mixin aspect-ratio($width, $height) {
+  padding-top: ($height / $width) * 100%;
+}
+// use class like this
+// .bg-img {
+// @include aspect-ratio(16, 9);
+// }
